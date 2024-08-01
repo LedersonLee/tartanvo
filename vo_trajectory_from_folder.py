@@ -1,10 +1,12 @@
+import sys
+sys.path.append(r"/tartanvo/tartanvo/evaluator")
+
 from torch.utils.data import DataLoader
 from Datasets.utils import ToTensor, Compose, CropCenter, dataset_intrinsics, DownscaleFlow, plot_traj, visflow
 from Datasets.tartanTrajFlowDataset import TrajFolderDataset
 from Datasets.transformation import ses2poses_quat
 from evaluator.tartanair_evaluator import TartanAirEvaluator
 from TartanVO import TartanVO
-
 import argparse
 import numpy as np
 import cv2
